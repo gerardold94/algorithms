@@ -38,16 +38,16 @@ int divide(int* number_list, int start, int end) {
     return right;
 }
 
-void quicksort(int* number_list, int start, int end) {
+void quickSort(int* number_list, int start, int end) {
     int pivot;
 
     if (start < end) {
         pivot = divide(number_list, start, end);
 
         // Sort the list of minors
-        quicksort(number_list, start, pivot - 1);
+        quickSort(number_list, start, pivot - 1);
         // Sort the list of biggest
-        quicksort(number_list, pivot + 1, end);
+        quickSort(number_list, pivot + 1, end);
     }
 }
 
@@ -72,7 +72,7 @@ int main(int argc, char *argv[]) {
     }
 
     // Pass number_list by reference
-    quicksort(number_list, 0, n-1);
+    quickSort(number_list, 0, n-1);
     print(number_list, n);
 
     free (number_list); // free memory

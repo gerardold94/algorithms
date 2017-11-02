@@ -39,12 +39,12 @@ int main(int argc, char *argv[]) {
 
    	// Read data from stdin
     for (i = 0; i < n; i++) {
-		scanf("%d", &number_list[i]);
-    }
+      scanf("%d", &number_list[i]);
+  }
 
     // Pass number_list by reference
-    sort(number_list, n);
-    print(number_list, n);
+  sort(number_list, n);
+  print(number_list, n);
 
     free (number_list); // free memory
 
