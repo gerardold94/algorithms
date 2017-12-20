@@ -1,5 +1,4 @@
 #include "interpolation_search.h"
-#include <stdio.h>
 
 /**
  * Search for a number in a sorted list of integers
