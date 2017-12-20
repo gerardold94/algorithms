@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "quick_sort.h"
 
 int divide(int* number_list, int start, int end) {
     int left;
@@ -56,26 +57,4 @@ void print(int* number_list, int n) {
 	for (i = 0; i < n; i++) {
 		printf("%d\n", number_list[i]);
     }
-}
-
-int main(int argc, char *argv[]) {
-    int number, n, i, j;
-    int* number_list;
-
-    // Read n - len of data
-    scanf ("%d", &n);
-    number_list = malloc (sizeof(int)*n);
-
-   	// Read data from stdin
-    for (i = 0; i < n; i++) {
-		scanf("%d", &number_list[i]);
-    }
-
-    // Pass number_list by reference
-    quickSort(number_list, 0, n-1);
-    print(number_list, n);
-
-    free (number_list); // free memory
-
-    return 0;
 }

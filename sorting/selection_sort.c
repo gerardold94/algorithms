@@ -33,25 +33,3 @@ void selectionSort(int* number_list, int n) {
         number_list[i] = tmp;
     }
 }
-
-int main(int argc, char *argv[]) {
-    int number, n, i, j;
-    int* number_list;
-
-    // Read n - len of data
-    scanf ("%d", &n);
-    number_list = malloc (sizeof(int)*n);
-
-   	// Read data from stdin
-    for (i = 0; i < n; i++) {
-        scanf("%d", &number_list[i]);
-    }
-
-    // Pass number_list by reference
-    selectionSort(number_list, n);
-    print(number_list, n);
-
-    free (number_list); // free memory
-
-    return 0;
-}

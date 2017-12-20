@@ -51,25 +51,3 @@ void mergeSort(int* number_list, int start, int end) {
         merge(number_list, start, pivot, end);
     }
 }
-
-int main(int argc, char *argv[]) {
-    int number, n, i, j;
-    int* number_list;
-
-    // Read n - len of data
-    scanf ("%d", &n);
-    number_list = malloc (sizeof(int)*n);
-
-   	// Read data from stdin
-    for (i = 0; i < n; i++) {
-		scanf("%d", &number_list[i]);
-    }
-
-    // Pass number_list by reference
-    mergeSort(number_list, 0, n-1);
-    print(number_list, n);
-
-    free (number_list); // free memory
-
-    return 0;
-}

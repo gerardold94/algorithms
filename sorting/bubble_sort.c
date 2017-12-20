@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void sort(int* number_list, int n) {
+void bubbleSort(int* number_list, int n) {
 	int i, j, swapped;
 
 	// Bubble Sort Algorithm
@@ -27,26 +27,4 @@ void print(int* number_list, int n) {
 	for (i = 0; i < n; i++) {
 		printf("%d\n", number_list[i]);
     }
-}
-
-int main(int argc, char *argv[]) {
-    int number, n, i, j;
-    int* number_list;
-
-    // Read n - len of data
-    scanf ("%d", &n);
-    number_list = malloc (sizeof(int)*n);
-
-   	// Read data from stdin
-    for (i = 0; i < n; i++) {
-      scanf("%d", &number_list[i]);
-  }
-
-    // Pass number_list by reference
-  sort(number_list, n);
-  print(number_list, n);
-
-    free (number_list); // free memory
-
-    return 0;
 }
